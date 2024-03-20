@@ -6,6 +6,10 @@ const devRootPort = "http://localhost:3000";
 const { data: posts } = await useAsyncData(`main`, async () => {
   return $fetch(`${devRootPort}/data/indexSimple.json`);
 });
+
+watch(() => route.fullPath, (newFullPath, oldFullPath) => {
+  console.log(`Route changed from ${oldFullPath} to ${newFullPath}`);
+});
 </script>
 
 <template>

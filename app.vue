@@ -10,7 +10,7 @@ useHead({
 
 <template>
   <div>
-    <NuxtPage />
+    <NuxtPage keepalive/>
 
     <footer class="footer p-10 bg-neutral text-neutral-content">
       <nav>
